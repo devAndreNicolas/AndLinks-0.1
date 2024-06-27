@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-url: url(./assets/bg-desktop.jpg);
+  --switch-bg: url(/assets/moon-stars.svg);
+  --names-color: antiquewhite;
+  --switch-background-color: white;
+  --background-buttom-color-ulia: rgba(255, 205, 255, 0.2);
+  --backgroud-buttom-ulia: rgba(255, 255, 255, 0.1);
+  --background-buttom-color-hover-ulia: rgba(255, 255, 255, white);
+  --backgroud-buttom-hover-ulia: rgba(255, 255, 255, 0.05);
+  --social-links-background-a: rgba(255, 255, 255, 0.1);
+  --social-links-background-color-a: rgba(255, 205, 255, 0.2);
+  --social-links-hover-color: #ffee10;
+  --icon-color: antiquewhite;
+}
+.light {
+  --bg-url: url(./assets/bg-desktop-light.jpg);
+  --switch-bg: url(/assets/sun.svg);
+  --names-color: black;
+  --switch-background-color: white;
+  --background-buttom-color-ulia: rgba(100, 40, 255, 0.3);
+  --backgroud-buttom-ulia: rgba(100, 40, 255, 0.1);
+  --background-buttom-color-hover-ulia: rgba(100, 40, 255, 0.5);
+  --backgroud-buttom-hover-ulia: rgba(255, 255, 255, 0.05);
+  --social-links-background-a: rgba(255, 255, 255, 0.05);
+  --social-links-background-color-a: rgba(100, 40, 255, 0.3);
+  --social-links-hover-color: #ffee10;
+  --icon-color: black;
+}
+body {
+  /* short code
+  background: url(./assets/bg-desktop.jpg) no-repeat top center /cover
+  */
+  /* long code
+  background-image: url(./assets/bg-desktop.jpg) ;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+  background: var(--bg-url) no-repeat top center / cover;
+}
+body * {
+  font-family: "Inter", sans-serif;
+}
+
+#container {
+  width: 588px;
+  height: 712px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 56px;
+  padding: 55px;
+}
+#profile {
+  text-align: center;
+}
+#profile img {
+  width: 200px;
+  margin: auto;
+  display: inline;
+}
+#profile p {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--names-color);
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+#switch {
+  position: relative;
+  width: 80px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+#switch button {
+  width: 30px;
+  height: 29px;
+  margin-bottom: 15px;
+  background: var(--switch-background-color) var(--switch-bg) no-repeat center;
+  position: absolute;
+  color: "dark";
+  border: 0;
+  border-radius: 50%;
+  z-index: 1;
+  transform: translateY(0%);
+  left: 0;
+}
+#switch span {
+  display: block;
+  width: 80px;
+  height: 30px;
+  background: var(--backgroud-buttom-ulia);
+  border: 1px solid var(--background-buttom-color-ulia);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+ul li a {
+  font-size: 20px;
+  color: var(--names-color);
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  padding: 22px 24px;
+  background: var(--backgroud-buttom-ulia);
+  background-color: var(--background-buttom-color-ulia);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s;
+  transition: background 0.5s;
+}
+ul li a:hover {
+  background: var(--backgroud-buttom-hover-ulia);
+  background-color: 1px solid var(--background-buttom-color-hover-ulia);
+}
+
+ion-icon[name="logo-github"] {
+  color: var(--icon-color);
+}
+ion-icon[name="logo-linkedin"] {
+  color: var(--icon-color);
+}
+ion-icon[name="logo-instagram"] {
+  color: var(--icon-color);
+}
+
+#social-links {
+  display: flex;
+  gap: 160px;
+  font-size: 0px;
+  margin-top: 30px;
+  width: 480px;
+  height: 10px;
+  list-style: none;
+}
+#social-links a {
+  width: 80px;
+  height: 55px;
+  text-align: center;
+  line-height: 63px;
+  background: var(--social-links-background-a);
+  background-color: var(--social-links-background-color-a);
+  border-radius: 50%;
+  font-size: 30px;
+  line-height: 65px;
+  border-radius: 30%;
+  transition: all 0.3s;
+  transition: background 0.5s;
+}
+#social-links a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--social-links-hover-color);
+}
+#social-links a:hover {
+  box-shadow: 0 0 5px var(--social-links-hover-color);
+  text-shadow: 0 0 5px var(--social-links-hover-color);
+}
