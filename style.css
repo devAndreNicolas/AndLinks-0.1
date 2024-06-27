@@ -42,6 +42,7 @@ body {
   background-size: cover;
   */
   background: var(--bg-url) no-repeat top center / cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -94,7 +95,7 @@ body * {
   left: 0;
 }
 #switch span {
-  display: block;
+  display: flex;
   width: 80px;
   height: 30px;
   background: var(--backgroud-buttom-ulia);
@@ -143,12 +144,13 @@ ion-icon[name="logo-instagram"] {
 
 #social-links {
   display: flex;
-  gap: 160px;
+  gap: 20px;
   font-size: 0px;
   margin-top: 30px;
-  width: 480px;
+  width: 200px;
   height: 10px;
   list-style: none;
+  margin-left: 140px;
 }
 #social-links a {
   width: 80px;
@@ -171,4 +173,10 @@ ion-icon[name="logo-instagram"] {
 #social-links a:hover {
   box-shadow: 0 0 5px var(--social-links-hover-color);
   text-shadow: 0 0 5px var(--social-links-hover-color);
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
 }
