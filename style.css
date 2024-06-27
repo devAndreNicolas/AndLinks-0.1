@@ -174,9 +174,4 @@ ion-icon[name="logo-instagram"] {
   box-shadow: 0 0 5px var(--social-links-hover-color);
   text-shadow: 0 0 5px var(--social-links-hover-color);
 }
-@media screen and (max-width: 768px) {
-  .container {
-    width: 100%;
-    flex-direction: column;
-  }
-}
+
