@@ -5,7 +5,7 @@
 }
 :root {
   --bg-url: url(./assets/bg-desktop.jpg);
-  --switch-bg: url(/assets/moon-stars.svg);
+  --switch-bg: url(./assets/moon-stars.svg);
   --names-color: antiquewhite;
   --switch-background-color: white;
   --background-buttom-color-ulia: rgba(255, 205, 255, 0.2);
@@ -19,7 +19,7 @@
 }
 .light {
   --bg-url: url(./assets/bg-desktop-light.jpg);
-  --switch-bg: url(/assets/sun.svg);
+  --switch-bg: url(./assets/sun.svg);
   --names-color: black;
   --switch-background-color: white;
   --background-buttom-color-ulia: rgba(100, 40, 255, 0.3);
